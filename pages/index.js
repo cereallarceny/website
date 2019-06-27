@@ -4,9 +4,9 @@ export default function HomePage() {
   return (
     <main>
       <Head>
-        <title>Next.js on Now</title>
+        <title>Just testing Github</title>
       </Head>
-      <h1>Next.js on Now</h1>
+      <h1>Just testing Github</h1>
       <h2>
         Developed & Deployed with{" "}
         <a
