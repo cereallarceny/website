@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "alias": ["www.patrickcason.com"],
+  "name": "website",
+  "scope": "cereallarceny",
+  "builds": [
+    {
+      "src": "next.config.js",
+      "use": "@now/next"
+    }
+  ]
+}
