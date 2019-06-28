@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "alias": ["patrickcason.com", "www.patrickcason.com"],
+  "alias": ["patrickcason.com"],
   "name": "website",
   "scope": "cereallarceny",
   "routes": [

@@ -4,9 +4,9 @@ export default function HomePage() {
   return (
     <main>
       <Head>
-        <title>Just testing Github</title>
+        <title>Just testing Redirect</title>
       </Head>
-      <h1>Just testing Github</h1>
+      <h1>Just testing Redirect</h1>
       <h2>
         Developed & Deployed with{" "}
         <a
