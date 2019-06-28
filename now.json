@@ -3,15 +3,6 @@
   "alias": ["patrickcason.com", "www.patrickcason.com"],
   "name": "website",
   "scope": "cereallarceny",
-  "routes": [
-    {
-      "src": "https://www.patrickcason.com/(.*)",
-      "status": 301,
-      "headers": {
-        "Location": "https://patrickcason.com/$1"
-      }
-    }
-  ],
   "builds": [
     {
       "src": "next.config.js",
