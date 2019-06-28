@@ -4,9 +4,9 @@ export default function HomePage() {
   return (
     <main>
       <Head>
-        <title>Just testing Redirect</title>
+        <title>Just testing again</title>
       </Head>
-      <h1>Just testing Redirect</h1>
+      <h1>Just testing again</h1>
       <h2>
         Developed & Deployed with{" "}
         <a
