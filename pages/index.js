@@ -1,49 +1,10 @@
-import Head from "next/head";
+import Page from '../components/page';
 
-export default function HomePage() {
-  return (
-    <main>
-      <Head>
-        <title>Just testing again</title>
-      </Head>
-      <h1>Just testing again</h1>
-      <h2>
-        Developed & Deployed with{" "}
-        <a
-          href="https://zeit.co/docs"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          ZEIT Now
-        </a>
-        !
-      </h2>
-      <style jsx>{`
-        main {
-          font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue",
-            "Helvetica", "Arial", sans-serif;
-          padding: 20px 20px 60px;
-          max-width: 680px;
-          margin: 0 auto;
-          font-size: 16px;
-          line-height: 1.65;
-          text-align: center;
-        }
-        h1 {
-          margin-top: 70px;
-          font-size: 45px;
-        }
-        a {
-          cursor: pointer;
-          color: #0076ff;
-          text-decoration: none;
-          transition: all 0.2s ease;
-          border-bottom: 1px solid white;
-        }
-        a:hover {
-          border-bottom: 1px solid #0076ff;
-        }
-      `}</style>
-    </main>
-  );
-}
+import patrick from '../static/patrick.jpg';
+
+export default () => (
+  <Page>
+    <h1>Hello world!</h1>
+    <img src={patrick} alt="Patrick Cason" />
+  </Page>
+);
