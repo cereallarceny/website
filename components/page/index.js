@@ -1,11 +1,13 @@
 import Head from 'next/head';
+import { Global } from '@emotion/core';
+import normalize from 'emotion-normalize';
 
-import defaultImage from '../../static/patrick.jpg';
+import defaultImage from '../../static/logo.jpg';
 
 const defaultCanonical = 'https://patrickcason.com';
 const defaultName = 'Patrick Cason';
 const defaultDescription =
-  'Full-stack developer & UI designer - interested in Internet privacy, open-source software, and ethical software development.';
+  "I'm a software engineer and UI designer - interested in online privacy, open-source software, and ethical programming.";
 
 export default ({
   title,
@@ -56,6 +58,15 @@ export default ({
 
         <title>{title}</title>
       </Head>
+      <Global
+        styles={{
+          ...normalize,
+          'html, body': {
+            padding: 0,
+            margin: 0
+          }
+        }}
+      />
       {children}
     </React.Fragment>
   );

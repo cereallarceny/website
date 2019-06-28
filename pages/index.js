@@ -1,31 +1,38 @@
-import { css, Global } from '@emotion/core';
-import styled from '@emotion/styled';
+import { Flex, Image, Box, Heading, Text } from '@rebass/emotion';
 
 import Page from '../components/page';
+import Project from '../components/project';
+import ExternalLink from '../components/external-link';
+import Icon from '../components/icon';
 
-import patrick from '../static/patrick.jpg';
+import content from '../content/homepage';
 
-const Basic = styled.div(
-  css({
-    backgroundColor: 'white',
-    color: 'cornflowerblue',
-    border: '1px solid lightgreen',
-    padding: '1rem 0.5rem'
-  })
-);
+const { name, avatar, social, tagline, bio, learnMore, projects } = content;
 
 export default () => (
   <Page>
-    <Global
-      styles={css`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-        }
-      `}
-    />
-    <Basic>Hello!</Basic>
-    <img src={patrick} alt="Patrick Cason" />
+    <Flex>
+      <Image
+        src={avatar}
+        alt={name}
+        width={128}
+        height={128}
+        borderRadius={8}
+      />
+      <Box>
+        <Heading as="h1">{name}</Heading>
+        {social.map(({ type, link }) => (
+          <ExternalLink key={link} to={link}>
+            <Icon type={type} />
+          </ExternalLink>
+        ))}
+        <Text>{tagline}</Text>
+        <Text>{bio}</Text>
+        <Text>{learnMore}</Text>
+      </Box>
+    </Flex>
+    {projects.map((project, index) => (
+      <Project key={index} {...project} />
+    ))}
   </Page>
 );
