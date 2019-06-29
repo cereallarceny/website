@@ -17,11 +17,14 @@
     "@rebass/emotion": "^3.1.1",
     "babel-plugin-emotion": "^10.0.14",
     "emotion-normalize": "^10.0.0",
+    "emotion-theming": "^10.0.14",
     "next": "^8.1.0",
     "next-compose-plugins": "^2.2.0",
     "next-optimized-images": "^2.5.3",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-animate-height": "https://github.com/cereallarceny/react-animate-height.git#master",
+    "react-dom": "^16.8.6",
+    "react-icons": "^3.7.0"
   },
   "devDependencies": {
     "husky": "^2.7.0",

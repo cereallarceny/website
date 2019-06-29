@@ -1,7 +1,9 @@
 import Head from 'next/head';
 import { Global } from '@emotion/core';
+import { ThemeProvider } from 'emotion-theming';
 import normalize from 'emotion-normalize';
 
+import theme from './theme.js';
 import defaultImage from '../../static/logo.jpg';
 
 const defaultCanonical = 'https://patrickcason.com';
@@ -58,16 +60,8 @@ export default ({
 
         <title>{title}</title>
       </Head>
-      <Global
-        styles={{
-          ...normalize,
-          'html, body': {
-            padding: 0,
-            margin: 0
-          }
-        }}
-      />
-      {children}
+      <Global styles={{ normalize }} />
+      <ThemeProvider theme={theme}>{children}</ThemeProvider>
     </React.Fragment>
   );
 };
