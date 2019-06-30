@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Flex, Image, Box, Heading, Text, Link } from '@rebass/emotion';
+import { Flex, Image, Box, Heading, Text, Button } from '@rebass/emotion';
 import AnimateHeight from 'react-animate-height';
 
 import Page from '../components/page';
@@ -9,7 +9,7 @@ import Icon from '../components/icon';
 
 import content from '../content/homepage';
 
-const { name, avatar, social, tagline, bio, learnMore, projects } = content;
+const { name, avatar, social, tagline, bio, opinions, projects } = content;
 
 export default () => {
   const [showBio, setShowBio] = useState(false);
@@ -42,7 +42,26 @@ export default () => {
           <Text fontSize={3} color="darkGray" lineHeight="tall">
             {tagline}
           </Text>
-          <Link onClick={() => setShowBio(!showBio)}>Learn more</Link>
+          <Button
+            variant="learnMore"
+            width={['100%', 'auto']}
+            my={3}
+            onClick={() => {
+              if (showBio) {
+                if (showOpinions) {
+                  setShowOpinions(false);
+
+                  setTimeout(() => setShowBio(false), 500);
+                } else {
+                  setShowBio(false);
+                }
+              } else {
+                setShowBio(true);
+              }
+            }}
+          >
+            <Text as="span">{showBio ? 'Close' : 'Learn more'}</Text>
+          </Button>
         </Box>
         <AnimateHeight
           height={showBio ? 'auto' : 0}
@@ -52,10 +71,26 @@ export default () => {
           <Text fontSize={3} color="mediumGray" lineHeight="normal">
             {bio}
           </Text>
+          <Button
+            variant="learnMore"
+            width={['100%', 'auto']}
+            my={3}
+            onClick={() => setShowOpinions(!showOpinions)}
+          >
+            <Text as="span">
+              {showOpinions ? 'Hide opinions' : 'Show opinions'}
+            </Text>
+          </Button>
         </AnimateHeight>
-        {/* <Text fontSize={3} color="darkGray" lineHeight="normal">
-          {learnMore}
-        </Text> */}
+        <AnimateHeight
+          height={showOpinions ? 'auto' : 0}
+          animateOpacity
+          opacityDelay={500}
+        >
+          <Text fontSize={3} color="darkGray" lineHeight="normal">
+            {opinions}
+          </Text>
+        </AnimateHeight>
         {projects.map((project, index) => (
           <Project key={index} {...project} />
         ))}

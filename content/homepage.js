@@ -29,7 +29,7 @@ export default {
   ),
   bio:
     "I've worked for the past 10 years as a technologist in the politics, finance, healthcare, hospitality, and music industries. In particular I'm interested in online privacy, open-source software, and ethical programming.",
-  learnMore: (
+  opinions: (
     <React.Fragment>
       A few strong opinions:
       <ul>
