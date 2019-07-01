@@ -4109,9 +4109,8 @@ rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-"react-animate-height@https://github.com/cereallarceny/react-animate-height.git#master":
+"react-animate-height@file:../../react-animate-height":
   version "2.0.15"
-  resolved "https://github.com/cereallarceny/react-animate-height.git#2ab35b60a832b286147a190a3c778a4e4500b310"
   dependencies:
     classnames "^2.2.5"
     prop-types "^15.6.1"

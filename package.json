@@ -22,7 +22,7 @@
     "next-compose-plugins": "^2.2.0",
     "next-optimized-images": "^2.5.3",
     "react": "^16.8.6",
-    "react-animate-height": "https://github.com/cereallarceny/react-animate-height.git#master",
+    "react-animate-height": "file:./../../react-animate-height",
     "react-dom": "^16.8.6",
     "react-icons": "^3.7.0"
   },

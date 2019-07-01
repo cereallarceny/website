@@ -1,3 +1,5 @@
+import Opinion from '../components/opinion';
+
 import patrick from '../static/headshot.jpg';
 
 export default {
@@ -32,20 +34,18 @@ export default {
   opinions: (
     <React.Fragment>
       A few strong opinions:
-      <ul>
-        <li>
-          People should own, host, and fully control all of their online
-          information.
-        </li>
-        <li>
-          The term "user experience" should not be used as an excuse to monitor
-          and manipulate individuals.
-        </li>
-        <li>
-          Technology should be designed to serve people, rewarding intuition and
-          promoting non-addictive behavior.
-        </li>
-      </ul>
+      <Opinion>
+        People should own, host, and fully control all of their online
+        information.
+      </Opinion>
+      <Opinion>
+        The term "user experience" should not be used as an excuse to monitor
+        and manipulate individuals.
+      </Opinion>
+      <Opinion>
+        Technology should be designed to serve people, rewarding intuition and
+        promoting non-addictive behavior.
+      </Opinion>
     </React.Fragment>
   ),
   projects: [

@@ -60,7 +60,12 @@ export default ({
 
         <title>{title}</title>
       </Head>
-      <Global styles={{ normalize }} />
+      <Global
+        styles={{
+          normalize,
+          body: { background: theme.colors.white, color: theme.colors.black }
+        }}
+      />
       <ThemeProvider theme={theme}>{children}</ThemeProvider>
     </React.Fragment>
   );

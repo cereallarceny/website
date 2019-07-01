@@ -1,11 +1,13 @@
 import { useState } from 'react';
-import { Flex, Image, Box, Heading, Text, Button } from '@rebass/emotion';
-import AnimateHeight from 'react-animate-height';
+import { Flex, Box, Heading, Text } from '@rebass/emotion';
+import AnimatedSection from 'react-animate-height';
 
 import Page from '../components/page';
 import Project from '../components/project';
 import ExternalLink from '../components/external-link';
 import Icon from '../components/icon';
+import Avatar from '../components/avatar';
+import LearnMore from '../components/learn-more';
 
 import content from '../content/homepage';
 
@@ -15,18 +17,38 @@ export default () => {
   const [showBio, setShowBio] = useState(false);
   const [showOpinions, setShowOpinions] = useState(false);
 
+  const onClickBio = () => {
+    if (showBio) {
+      if (showOpinions) {
+        setShowOpinions(false);
+
+        setTimeout(() => setShowBio(false), 500);
+      } else {
+        setShowBio(false);
+      }
+    } else {
+      setShowBio(true);
+    }
+  };
+
+  const onClickOpinions = () => setShowOpinions(!showOpinions);
+
+  const paragraphProps = {
+    fontSize: 3,
+    color: 'darkGray',
+    lineHeight: 'tall'
+  };
+
+  const sectionProps = {
+    animateOpacity: true,
+    opacityDelay: 500
+  };
+
   return (
     <Page>
-      <Box p={3}>
+      <Box p={[3, 4]} width={[1, null, 2 / 3, 1 / 2]}>
         <Flex alignItems="center" mb={3}>
-          <Image
-            src={avatar}
-            alt={name}
-            width={[72, 96]}
-            height={[72, 96]}
-            borderRadius={8}
-            mr={3}
-          />
+          <Avatar src={avatar} alt={name} />
           <Box>
             <Heading as="h1" fontSize={[4, 5]} mb={[2, 3]}>
               {name}
@@ -39,58 +61,20 @@ export default () => {
           </Box>
         </Flex>
         <Box>
-          <Text fontSize={3} color="darkGray" lineHeight="tall">
-            {tagline}
-          </Text>
-          <Button
-            variant="learnMore"
-            width={['100%', 'auto']}
-            my={3}
-            onClick={() => {
-              if (showBio) {
-                if (showOpinions) {
-                  setShowOpinions(false);
-
-                  setTimeout(() => setShowBio(false), 500);
-                } else {
-                  setShowBio(false);
-                }
-              } else {
-                setShowBio(true);
-              }
-            }}
-          >
-            <Text as="span">{showBio ? 'Close' : 'Learn more'}</Text>
-          </Button>
+          <Text {...paragraphProps}>{tagline}</Text>
+          <LearnMore onClick={onClickBio}>
+            {showBio ? 'Close' : 'Learn more'}
+          </LearnMore>
         </Box>
-        <AnimateHeight
-          height={showBio ? 'auto' : 0}
-          animateOpacity
-          opacityDelay={500}
-        >
-          <Text fontSize={3} color="mediumGray" lineHeight="normal">
-            {bio}
-          </Text>
-          <Button
-            variant="learnMore"
-            width={['100%', 'auto']}
-            my={3}
-            onClick={() => setShowOpinions(!showOpinions)}
-          >
-            <Text as="span">
-              {showOpinions ? 'Hide opinions' : 'Show opinions'}
-            </Text>
-          </Button>
-        </AnimateHeight>
-        <AnimateHeight
-          height={showOpinions ? 'auto' : 0}
-          animateOpacity
-          opacityDelay={500}
-        >
-          <Text fontSize={3} color="darkGray" lineHeight="normal">
-            {opinions}
-          </Text>
-        </AnimateHeight>
+        <AnimatedSection {...sectionProps} height={showBio ? 'auto' : 0}>
+          <Text {...paragraphProps}>{bio}</Text>
+          <LearnMore onClick={onClickOpinions}>
+            {showOpinions ? 'Close' : 'Show opinions'}
+          </LearnMore>
+        </AnimatedSection>
+        <AnimatedSection {...sectionProps} height={showOpinions ? 'auto' : 0}>
+          <Text {...paragraphProps}>{opinions}</Text>
+        </AnimatedSection>
         {projects.map((project, index) => (
           <Project key={index} {...project} />
         ))}
