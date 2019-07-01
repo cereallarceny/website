@@ -1,4 +1,5 @@
-import Opinion from '../components/opinion';
+import ListItem from '../components/list-item';
+import ExternalLink from '../components/external-link';
 
 import patrick from '../static/headshot.jpg';
 
@@ -34,30 +35,30 @@ export default {
   opinions: (
     <React.Fragment>
       A few strong opinions:
-      <Opinion>
+      <ListItem>
         People should own, host, and fully control all of their online
         information.
-      </Opinion>
-      <Opinion>
+      </ListItem>
+      <ListItem>
         The term "user experience" should not be used as an excuse to monitor
         and manipulate individuals.
-      </Opinion>
-      <Opinion>
+      </ListItem>
+      <ListItem>
         Technology should be designed to serve people, rewarding intuition and
         promoting non-addictive behavior.
-      </Opinion>
+      </ListItem>
     </React.Fragment>
   ),
   projects: [
     {
-      borders: ['#e0bc88', '#0f0'],
       title: 'OpenMined',
       description:
-        'An open-source community focused on researching, developing, and promoting tools for secure, privacy-preserving, value-aligned artificial intelligence',
+        'An open-source community focused on researching, developing, and promoting tools for secure, privacy-preserving, value-aligned artificial intelligence.',
       roles: [
         'Founding member and community manager',
         'Author of syft.js',
-        'Developed website and manages dev-ops infrastructure'
+        'Designed and developed website',
+        'Manages all dev ops infrastructure'
       ],
       links: [
         {
@@ -75,13 +76,12 @@ export default {
       ]
     },
     {
-      borders: ['#e0bc88', '#0f0'],
       title: 'Scholar Raise',
       description:
-        "A fintech service that helps people save for their child's college education using crowdfunding and automated investment management",
+        "A fintech service that helps people save for their child's college education using crowdfunding and automated investment management.",
       roles: [
         'Chief Product Officer',
-        'Responsible for all design, development, and infrastructure',
+        'Responsible for all design, development, and dev ops infrastructure',
         'Leads a fully remote staff in weekly SCRUM meetings'
       ],
       links: [
@@ -104,13 +104,12 @@ export default {
       ]
     },
     {
-      borders: ['#e0bc88', '#0f0'],
       title: 'Moonshot',
       description:
-        'A mashup between an open-source collective, design studio, and a dev shop all roled into one',
+        'A mashup between an open-source collective, design studio, and a dev shop all roled into one.',
       roles: [
-        'Working on multiple open-source projects simultaneously',
-        'Available for work - insert seed money, receive bacon'
+        'Manage and develop multiple open-source projects',
+        "We're available for hire - insert seed money, receive bacon"
       ],
       links: [
         {

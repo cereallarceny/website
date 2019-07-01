@@ -1,39 +1,35 @@
-import styled from '@emotion/styled';
 import { Flex, Box, Heading, Text } from '@rebass/emotion';
 
+import ListItem from '../list-item';
 import ExternalLink from '../external-link';
 import Icon from '../icon';
 
-const RolesList = styled.ul({});
+const paragraphProps = {
+  color: 'mediumGray',
+  lineHeight: 'normal'
+};
 
-const Role = styled.li({});
-
-export default ({ borders, title, description, roles, links }) => (
-  <Flex>
-    {borders.map(color => (
-      <Box key={color} bg={color} width={8} />
-    ))}
+export default ({ title, description, roles, links }) => (
+  <Box mt={4}>
     <Box>
-      <Heading as="h3">{title}</Heading>
-      <Text>{description}</Text>
-      <RolesList>
-        {roles.map(role => {
-          if (React.isValidElement(role)) return <Role key={role}>{role}</Role>;
-
-          return (
-            <Role key={role}>
-              <Text>{role}</Text>
-            </Role>
-          );
-        })}
-      </RolesList>
-      <Flex>
+      <Heading as="h3" mb={[2, 3]}>
+        {title}
+      </Heading>
+      <Text {...paragraphProps} mb={[2, 3]}>
+        {description}
+      </Text>
+      {roles.map(role => (
+        <ListItem key={role} lineHeight="normal" color="darkGray">
+          {role}
+        </ListItem>
+      ))}
+      <Flex mt={3}>
         {links.map(({ type, link }) => (
-          <ExternalLink key={link} to={link}>
+          <ExternalLink key={link} to={link} mr={3}>
             <Icon type={type} />
           </ExternalLink>
         ))}
       </Flex>
     </Box>
-  </Flex>
+  </Box>
 );
