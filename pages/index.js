@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Flex, Box, Heading, Text } from '@rebass/emotion';
-import AnimatedSection from 'react-animate-height';
+import Bungee from 'react-bungee';
 
 import Page from '../components/page';
 import Project from '../components/project';
@@ -39,10 +39,7 @@ export default () => {
     lineHeight: 'tall'
   };
 
-  const sectionProps = {
-    animateOpacity: true,
-    opacityDelay: 500
-  };
+  const bungeeTransition = { transition: 'opacity 0.25s linear 0.5s' };
 
   return (
     <Page>
@@ -66,15 +63,21 @@ export default () => {
             {showBio ? 'Close' : 'Learn more'}
           </LearnMore>
         </Box>
-        <AnimatedSection {...sectionProps} height={showBio ? 'auto' : 0}>
+        <Bungee
+          style={{ ...bungeeTransition, opacity: showBio ? 1 : 0 }}
+          height={showBio ? 'auto' : 0}
+        >
           <Text {...paragraphProps}>{bio}</Text>
           <LearnMore onClick={onClickOpinions}>
             {showOpinions ? 'Close' : 'Show opinions'}
           </LearnMore>
-        </AnimatedSection>
-        <AnimatedSection {...sectionProps} height={showOpinions ? 'auto' : 0}>
+        </Bungee>
+        <Bungee
+          style={{ ...bungeeTransition, opacity: showOpinions ? 1 : 0 }}
+          height={showOpinions ? 'auto' : 0}
+        >
           <Text {...paragraphProps}>{opinions}</Text>
-        </AnimatedSection>
+        </Bungee>
         {projects.map((project, index) => (
           <Project key={index} {...project} />
         ))}
