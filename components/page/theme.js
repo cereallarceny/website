@@ -40,7 +40,7 @@ export default {
         content: '""'
       },
       '& > span': {
-        background: 'white',
+        background: white,
         padding: '0px 10px',
         textTransform: 'uppercase',
         letterSpacing: '1px',
