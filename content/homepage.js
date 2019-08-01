@@ -1,11 +1,9 @@
 import ListItem from '../components/list-item';
-import ExternalLink from '../components/external-link';
-
-import patrick from '../static/headshot.jpg';
+import avatar from '../static/headshot.jpg';
 
 export default {
   name: 'Patrick Cason',
-  avatar: patrick,
+  avatar,
   social: [
     {
       type: 'github',
@@ -22,6 +20,10 @@ export default {
     {
       type: 'stack-overflow',
       link: 'https://stackoverflow.com/users/591776/cereallarceny'
+    },
+    {
+      type: 'resume',
+      link: '/static/resume.pdf'
     }
   ],
   tagline: (
@@ -56,6 +58,7 @@ export default {
         'An open-source community focused on researching, developing, and promoting tools for secure, privacy-preserving, value-aligned artificial intelligence.',
       roles: [
         'Founding member and community manager',
+        'Received a grant from the RAAIS foundation for encrypted machine translation',
         'Author of syft.js',
         'Designed and developed website',
         'Manages all dev ops infrastructure'

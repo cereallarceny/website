@@ -6,7 +6,8 @@ import {
   FaLink,
   FaTwitter,
   FaFacebookSquare,
-  FaInstagram
+  FaInstagram,
+  FaFileAlt
 } from 'react-icons/fa';
 
 export default ({ type, ...props }) => {
@@ -20,6 +21,7 @@ export default ({ type, ...props }) => {
   if (type === 'twitter') return <FaTwitter {...props} />;
   if (type === 'facebook') return <FaFacebookSquare {...props} />;
   if (type === 'instagram') return <FaInstagram {...props} />;
+  if (type === 'resume') return <FaFileAlt {...props} />;
 
   return type;
 };
