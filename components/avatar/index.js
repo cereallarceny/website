@@ -1,8 +1,6 @@
 import styled from '@emotion/styled';
 import { Box, Image } from '@rebass/emotion';
 
-// TODO: The height on the image container doesn't work until Rebass upgrades to styled-system v5: https://github.com/rebassjs/rebass/pull/591
-
 const ImageContainer = styled(Box)({
   position: 'relative',
   '&:after': {
