@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { Global } from '@emotion/core';
+import { Global, css } from '@emotion/core';
 import { ThemeProvider } from 'emotion-theming';
 import normalize from 'emotion-normalize';
 
@@ -61,10 +61,13 @@ export default ({
         <title>{title}</title>
       </Head>
       <Global
-        styles={{
-          normalize,
-          body: { background: theme.colors.white, color: theme.colors.black }
-        }}
+        styles={css`
+          ${normalize}
+          body {
+            background: ${theme.colors.white};
+            color: ${theme.colors.black};
+          }
+        `}
       />
       <ThemeProvider theme={theme}>{children}</ThemeProvider>
     </React.Fragment>
