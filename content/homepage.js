@@ -57,7 +57,7 @@ export default {
       description:
         'An open-source community focused on researching, developing, and promoting tools for secure, privacy-preserving, value-aligned artificial intelligence.',
       roles: [
-        'Founding member and community manager',
+        'Engineering Lead',
         'Received a grant from the RAAIS foundation for encrypted machine translation',
         'Author of syft.js',
         'Designed and developed website',
