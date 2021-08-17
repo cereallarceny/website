@@ -10,17 +10,18 @@ const ImageContainer = styled(Box)({
     width: '100%',
     height: '100%',
     boxShadow: 'inset 0px 0px 0px 8px rgba(255, 255, 255, 0.5)',
+    borderRadius: 9999,
     content: '""'
   }
 });
 
 const size = {
-  width: [72, 96],
-  height: [72, 96]
+  width: [80, 96],
+  height: [80, 96]
 };
 
 export default ({ src, alt }) => (
   <ImageContainer {...size} mr={3}>
-    <Image src={src} alt={alt} borderRadius={2} {...size} />
+    <Image src={src} alt={alt} borderRadius={9999} {...size} />
   </ImageContainer>
 );
