@@ -35,5 +35,5 @@ export default {
     </React.Fragment>
   ),
   bio:
-    "I've worked for the past 10 years as a technologist in the politics, finance, healthcare, hospitality, and music industries. In particular I'm interested in digital privacy, open-source software, and ethical programming."
+    "I've worked for the past 15 years as a technologist in the politics, finance, healthcare, hospitality, and music industries. In particular I'm interested in digital privacy, open-source software, and ethical programming."
 };
