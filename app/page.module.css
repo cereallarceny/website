@@ -1,0 +1,184 @@
+/* Animation for the container of the app */
+@keyframes appear {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Make the gradient "breathe" */
+@keyframes breathing {
+  0% { opacity: 1; }
+  50% { opacity: 0.75; }
+  100% { opacity: 1; }  
+}
+
+/* Wrapper for the entire site */
+.container {
+  --max-width: 460px;
+
+  /* Basic positioning */
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+
+  /* Width */
+  width: 80%;
+  max-width: var(--max-width);
+
+  /* Animate it on enter */
+  animation: appear 0.5s ease-in-out;
+}
+
+/* The main "holder" of information */
+.main {
+  --padding: 20px;
+
+  /* Flexbox */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* Appearance */
+  position: relative;
+  background: var(--light-color);
+  color: var(--dark-color);
+  padding: var(--padding);
+  border-radius: var(--border-radius);
+  box-shadow: 0px 0px 0px var(--border-radius) rgba(255, 255, 255, 0.1);
+}
+
+/* The gradient that goes behind the main content */
+.gradient {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: conic-gradient(from -90deg, var(--red-color), var(--orange-color), var(--yellow-color), var(--green-color), var(--blue-color), var(--red-color));
+  filter: blur(40px);
+  z-index: -1;
+  animation: breathing 7s infinite;
+}
+
+/* The image of yours truly */
+.image {
+  --size: 120px;
+
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/* Adding the inset box-shadow since <img> tags don't natively support this */
+.image:after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  border-radius: 50%;
+  box-shadow: inset 0px 0px 0px var(--border-radius) var(--light-color);
+  opacity: 0.5;
+}
+
+/* Header */
+.name {
+  font-weight: bold;
+  font-size: var(--title-font-size);
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 20x;
+}
+
+/* The content */
+.content {
+  font-size: var(--content-font-size);
+  line-height: var(--content-line-height);
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+/* Highlighted text */
+.highlight {
+  --highlight-before: 10px;
+  --highlight-after: 24px;
+
+  background: linear-gradient(0deg, var(--yellow-color), var(--yellow-color)) no-repeat right bottom / 0 var(--highlight-after);
+  transition: all 0.2s ease-in-out;
+  background-size: 100% var(--highlight-before);
+  cursor: pointer;
+}
+
+/* Animation for when a highlight is hovered or focused */
+.highlight:where(:hover, :focus-visible) {
+  background-size: 100% var(--highlight-after);
+}
+
+/* Styling links in the <Tooltip /> */
+.tooltip a {
+  text-decoration: none;
+  color: var(--yellow-color);
+  font-weight: bold;
+}
+
+/* Styling for those links on hover */
+.tooltip a:hover {
+  text-decoration: underline;
+}
+
+/* Social media links */
+.social {
+  --gap: 20px;
+
+  padding-left: 0px;
+  margin: 0px;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: var(--gap);
+}
+
+/* Each social icon image */
+.socialImage {
+  --size: 24px;
+
+  width: var(--size);
+  height: var(--size);
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+  opacity: 0.35;
+}
+
+/* Hover state for those social icon images */
+.socialImage:hover {
+  opacity: 1;
+}
+
+/* Desktop size overrides - mobile first! */
+@media screen and (min-width: 768px) {
+  /* Vertically center the container */
+  .container {
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* Increase the padding */
+  .main {
+    --padding: 40px;
+  }
+
+  /* Increase the spacing on the social media links */
+  .social {
+    --gap: 30px;
+  }
+
+  /* Increase the size of the social icon images */
+  .socialImage {
+    --size: 32px;
+  }
+}

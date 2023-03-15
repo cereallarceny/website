@@ -1,0 +1,59 @@
+/* Define some CSS variables to use throughout the site */
+:root {
+  /* Dark and light */
+  --dark-color: #111;
+  --light-color: #fff;
+
+  /* Colors */
+  --red-color: #CC333F;
+  --orange-color: #EB6841;
+  --yellow-color: #EDC951;
+  --green-color: #7DBE3C;
+  --blue-color: #00A0B0;
+
+  /* Border radius */
+  --border-radius: 6px;
+
+  /* Font settings */
+  --font-size: 16px;
+  --title-font-size: 2rem;
+  --content-font-size: 1.125rem;
+  --content-line-height: 1.875rem;
+
+  /* Overriding the react-tooltip variables */
+  --rt-color-white: var(--light-color);
+  --rt-color-dark: var(--dark-color);
+  --rt-color-success: var(--green-color);
+  --rt-color-error: var(--red-color);
+  --rt-color-warning: var(--orange-color);
+  --rt-color-info: var(--blue-color);
+}
+
+/* CSS reset for box-sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* CSS reset and text legibility settings */
+html, body {
+  margin: 0px;
+  padding: 0px;
+  font-size: var(--font-size);
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Changing the highlight color for most browsers */
+::selection {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+}
+
+/* Changing the highlight color for Firefox */
+::-moz-selection {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+}
