@@ -21,8 +21,8 @@ export const metadata = {
     images: [
       {
         url: 'https://patrickcason.com/meta.jpg',
-        width: 400,
-        height: 400,
+        width: 600,
+        height: 600,
       },
     ],
   },
