@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import { JetBrains_Mono } from 'next/font/google';
 
 import './globals.css';
@@ -40,7 +41,10 @@ const jetbrains = JetBrains_Mono({ subsets: ['latin'] });
 // Define the layout for the site, including the font
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
   <html lang="en">
-    <body className={jetbrains.className}>{children}</body>
+    <body className={jetbrains.className}>
+      {children}
+      <Analytics />
+    </body>
   </html>
 );
 
