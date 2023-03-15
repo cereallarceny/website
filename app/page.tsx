@@ -91,7 +91,7 @@ const Page = () => (
       <ul className={styles.social}>
         {data.social.map(({ name, image, url }) => (
           <li key={name}>
-            <Link href={url} target="_blank" rel="external">
+            <Link href={url} target="_blank" rel="external" prefetch={false}>
               <Image src={image} alt={name} className={styles.socialImage} />
             </Link>
           </li>
