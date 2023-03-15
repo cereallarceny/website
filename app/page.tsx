@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import Tooltip from './components/Tooltip';
+import Tooltip from './Tooltip';
 
 import styles from './page.module.css';
 
