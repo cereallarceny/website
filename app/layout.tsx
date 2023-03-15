@@ -20,7 +20,7 @@ export const metadata = {
     url: 'https://patrickcason.com',
     images: [
       {
-        url: 'https://patrickcason.com/meta.png',
+        url: 'https://patrickcason.com/meta.jpg',
         width: 400,
         height: 400,
       },
@@ -30,7 +30,7 @@ export const metadata = {
     card: 'summary_large_image',
     title,
     description,
-    images: ['https://patrickcason.com/meta.png'],
+    images: ['https://patrickcason.com/meta.jpg'],
   },
 };
 
