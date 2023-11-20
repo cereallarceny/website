@@ -73,7 +73,7 @@ const data = {
     {
       name: 'Resume',
       image: resume,
-      url: '/resume.pdf',
+      url: '/resume-patrick-cason.pdf',
     },
   ],
 };
