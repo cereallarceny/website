@@ -18,27 +18,19 @@ const data = {
     <>
       <span>👋 I&apos;m a freelance</span>{' '}
       <Tooltip
-        text="software developer"
+        text="software engineer"
         parentStyles={styles.highlight}
         childStyles={styles.tooltip}
       >
-        15 years and counting, baby!
+        {new Date().getFullYear() - 2008} years and counting
       </Tooltip>
       <span>,</span>{' '}
       <Tooltip
-        text="UI designer"
+        text="technical advisor"
         parentStyles={styles.highlight}
         childStyles={styles.tooltip}
       >
-        design + code === 🦄
-      </Tooltip>
-      <span>,</span>{' '}
-      <Tooltip
-        text="engineering manager"
-        parentStyles={styles.highlight}
-        childStyles={styles.tooltip}
-      >
-        5 years experience managing up to 80 people
+        I work with early-stage startups on tech, product, and GTM
       </Tooltip>
       <span>, and</span>{' '}
       <Tooltip

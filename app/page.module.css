@@ -13,7 +13,7 @@
 
 /* Wrapper for the entire site */
 .container {
-  --max-width: 460px;
+  --max-width: 480px;
 
   /* Basic positioning */
   position: absolute;
