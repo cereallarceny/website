@@ -62,11 +62,6 @@ const data = {
       image: stackOverflow,
       url: 'https://stackoverflow.com/users/591776/cereallarceny',
     },
-    {
-      name: 'Resume',
-      image: resume,
-      url: '/resume-patrick-cason.pdf',
-    },
   ],
 };
 
