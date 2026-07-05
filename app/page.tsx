@@ -16,13 +16,13 @@ const data = {
   name: 'Patrick Cason',
   content: () => (
     <>
-      <span>👋 I&apos;m a freelance</span>{' '}
+      <span>👋 I&apos;m a</span>{' '}
       <Tooltip
-        text="software engineer"
+        text="VP of Engineering"
         parentStyles={styles.highlight}
         childStyles={styles.tooltip}
       >
-        {new Date().getFullYear() - 2008} years and counting
+        G2i
       </Tooltip>
       <span>,</span>{' '}
       <Tooltip
@@ -48,20 +48,15 @@ const data = {
   ),
   social: [
     {
-      name: 'GitHub',
-      image: github,
-      url: 'https://github.com/cereallarceny',
-    },
-    {
       name: 'LinkedIn',
       image: linkedin,
       url: 'https://www.linkedin.com/in/patrickcason/',
     },
     {
-      name: 'Stack Overflow',
-      image: stackOverflow,
-      url: 'https://stackoverflow.com/users/591776/cereallarceny',
-    },
+      name: 'GitHub',
+      image: github,
+      url: 'https://github.com/cereallarceny',
+    }
   ],
 };
 
