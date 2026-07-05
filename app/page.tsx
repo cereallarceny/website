@@ -16,13 +16,16 @@ const data = {
   name: 'Patrick Cason',
   content: () => (
     <>
-      <span>👋 I&apos;m a</span>{' '}
+      <span>👋 I&apos;m an</span>{' '}
       <Tooltip
-        text="VP of Engineering"
+        text="engineering leader"
         parentStyles={styles.highlight}
         childStyles={styles.tooltip}
       >
-        G2i
+        VP of Engineering @{' '}
+        <Link href="https://g2i.ai" target="_blank" rel="external">
+          G2i
+        </Link>
       </Tooltip>
       <span>,</span>{' '}
       <Tooltip
