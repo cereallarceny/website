@@ -5,7 +5,7 @@ import Tooltip from './Tooltip';
 
 import styles from './page.module.css';
 
-import headshot from '../public/me.jpg';
+import headshot from '../public/headshot-alt2.jpeg';
 import github from '../public/github.svg';
 import linkedin from '../public/linkedin.svg';
 import stackOverflow from '../public/stack-overflow.svg';
