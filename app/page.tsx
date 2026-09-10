@@ -18,13 +18,13 @@ const data = {
     <>
       <span>👋 I&apos;m an</span>{' '}
       <Tooltip
-        text="engineering leader"
+        text="AI engineering leader"
         parentStyles={styles.highlight}
         childStyles={styles.tooltip}
       >
-        VP of Engineering @{' '}
-        <Link href="https://g2i.ai" target="_blank" rel="external">
-          G2i
+        View my {' '}
+        <Link href="https://www.linkedin.com/in/patrickcason" target="_blank" rel="external">
+          LinkedIn
         </Link>
       </Tooltip>
       <span>,</span>{' '}
@@ -33,33 +33,35 @@ const data = {
         parentStyles={styles.highlight}
         childStyles={styles.tooltip}
       >
-        I work with early-stage startups on tech, product, and GTM
+        <Link href="https://www.gofractional.com/member/patrick-cason" target="_blank" rel="external">
+          Work
+        </Link> with me
       </Tooltip>
       <span>, and</span>{' '}
       <Tooltip
-        text="entrepreneur"
+        text="software engineer"
         parentStyles={styles.highlight}
         childStyles={styles.tooltip}
       >
-        CTO @{' '}
-        <Link href="https://raisefinancial.com" target="_blank" rel="external">
-          Raise Financial
+        Check my{' '}
+        <Link href="https://github.com/cereallarceny" target="_blank" rel="external">
+          commits
         </Link>
       </Tooltip>{' '}
-      <span>working remote in Nashville, Tennessee.</span>
+      <span>focused on RL environments and human data, based Nashville.</span>
     </>
   ),
   social: [
-    {
-      name: 'LinkedIn',
-      image: linkedin,
-      url: 'https://www.linkedin.com/in/patrickcason/',
-    },
-    {
-      name: 'GitHub',
-      image: github,
-      url: 'https://github.com/cereallarceny',
-    }
+    // {
+    //   name: 'LinkedIn',
+    //   image: linkedin,
+    //   url: 'https://www.linkedin.com/in/patrickcason/',
+    // },
+    // {
+    //   name: 'GitHub',
+    //   image: github,
+    //   url: 'https://github.com/cereallarceny',
+    // }
   ],
 };
 
